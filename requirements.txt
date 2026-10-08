@@ -1,0 +1,7 @@
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.8.0
+matplotlib==3.9.2
+seaborn==0.13.2
+tqdm==4.66.5
+PyYAML==6.0.1
