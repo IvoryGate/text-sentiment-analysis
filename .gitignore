@@ -1,1 +1,13 @@
+# Source data
 data/
+
+# Python packaging metadata
+*.egg-info/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Build artifacts
+build/
+dist/
