@@ -5,6 +5,7 @@ Clean and split data into train data, validation data and test data.
 from sentiment_analysis.paths import RAW_DIR, CLEANED_DIR
 from sklearn.model_selection import train_test_split
 import pandas as pd
+import re
 
 # 加载原始数据集
 train_raw = pd.read_csv(RAW_DIR / "train.csv")
@@ -29,6 +30,38 @@ train_clean, validation_clean = train_test_split(
 
 train_clean = train_clean.reset_index(drop=True)
 validation_clean = validation_clean.reset_index(drop=True)
+
+splits = {
+    "train": train_clean,
+    "validation": validation_clean,
+    "test": test_clean,
+}
+
+def clean_html(text: str) -> str:
+    """仅移除标准的 html 标签。"""
+
+    # 将换行标签替换为空格
+    text = re.sub(
+        r"</?(?:br|hr|p)\s*/?>",
+        " ",
+        text,
+        flags=re.IGNORECASE,
+    )
+
+    # 移除倾斜加粗等标签
+    text = re.sub(
+        r"</?(?:i|em)\s*>",
+        "",
+        text,
+        flags=re.IGNORECASE,
+    )
+
+    return text
+
+# 清洗数据
+for data in splits.values():
+    data["text"] = data["text"].apply(clean_html)
+
 
 # 保存数据
 CLEANED_DIR.mkdir(parents= True, exist_ok= True)
