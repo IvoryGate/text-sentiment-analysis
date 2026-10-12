@@ -12,6 +12,7 @@ RAW_DIR = DATA_DIR / "raw"
 INTERIM_DIR = DATA_DIR / "interim"
 CLEANED_DIR = DATA_DIR / "cleaned"
 PROCESSED_DIR = DATA_DIR / "processed"
+TFIDF_DIR = DATA_DIR / "tfidf"
 
 # Experiment directories
 CONFIGS_DIR = ROOT / "configs"
