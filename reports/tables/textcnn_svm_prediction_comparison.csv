@@ -1,0 +1,5 @@
+CASE,COUNT
+Both correct,2029
+Only B06 correct,182
+Only TextCNN correct,133
+Both wrong,147
