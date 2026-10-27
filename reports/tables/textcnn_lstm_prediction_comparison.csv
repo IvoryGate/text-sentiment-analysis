@@ -1,0 +1,5 @@
+CASE,COUNT
+Both correct,1961
+Only TextCNN correct,201
+Only LSTM correct,166
+Both wrong,163
