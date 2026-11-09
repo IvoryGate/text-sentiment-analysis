@@ -1,0 +1,51 @@
+{
+  "selection_basis": "Notebook 022 validation results. All voting rules fixed before this test comparison.",
+  "primary": "Weighted soft vote",
+  "model_order": [
+    "B06",
+    "TextCNN",
+    "DistilBERT"
+  ],
+  "positive_label": 1,
+  "hard_min_positive_votes": 2,
+  "soft_positive_threshold": 0.5,
+  "soft_decision_rule": "Positive probability strictly greater than the threshold.",
+  "soft_weights": {
+    "Equal soft vote": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "Weighted soft vote": [
+      0.2,
+      0.3,
+      0.5
+    ]
+  },
+  "files": {
+    "test": {
+      "path": "data/cleaned/test.csv",
+      "sha256": "7bd5415632704fc7224d44760862729330d3b44b4b2f7893dcba485761bff026"
+    },
+    "calibrated_b06": {
+      "path": "data/models/b06_sigmoid_cv5.joblib",
+      "sha256": "d0ffb95c6616169d72e88ff976d7994c50c0c913ffa2d0b6b27edec834f7d425"
+    },
+    "fixed_predictions": {
+      "path": "reports/tables/fixed_models_test_predictions.csv",
+      "sha256": "fe7347fe1bb23d59a8289f407ae69d0a4a0f7c5d882de94114e4441a411c812a"
+    },
+    "distilbert_predictions": {
+      "path": "reports/tables/distilbert_test_predictions.csv",
+      "sha256": "70780a03d4149226a50ffa4ad3dd3bbeb4213db7b78ca3486c1a401527ea5c03"
+    },
+    "fixed_model_protocol": {
+      "path": "configs/final_test_protocol.json",
+      "sha256": "ae5c7db09e1e300f700ef9b8648d378ec6392496df5ab14d932020d9b93bb876"
+    },
+    "distilbert_protocol": {
+      "path": "configs/distilbert_test_protocol.json",
+      "sha256": "04d0551db9cf6a2deba26bbdfad1f970d3376072d9747e4f15ab19426ac8f6df"
+    }
+  }
+}

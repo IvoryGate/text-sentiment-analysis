@@ -1,0 +1,27 @@
+{
+  "model_id": "distilbert/distilbert-base-uncased",
+  "revision": "12040accade4e8a0f71eabdb258fecc2e7e948be",
+  "seed": 42,
+  "epoch": 1,
+  "selection": "minimum validation cross-entropy loss",
+  "training_protocol_sha256": "95e4b456c5fc9d36e874ceb75e1e77f05d57973a34fff4c725d639509d671cd5",
+  "max_length": 256,
+  "batch_size": 16,
+  "pad_to_multiple_of": 8,
+  "precision": "bf16",
+  "attention_implementation": "sdpa",
+  "torch": "2.7.1+cu118",
+  "transformers": "5.3.0",
+  "decision_rule": "argmax over negative and positive logits",
+  "test_sha256": "7bd5415632704fc7224d44760862729330d3b44b4b2f7893dcba485761bff026",
+  "prior_test_protocol_sha256": "ae5c7db09e1e300f700ef9b8648d378ec6392496df5ab14d932020d9b93bb876",
+  "prior_comparison_sha256": "1993e3686723cd27c7fb5d13145f692ff3878f37f32328a0f91f592734ce7f14",
+  "prior_predictions_sha256": "fe7347fe1bb23d59a8289f407ae69d0a4a0f7c5d882de94114e4441a411c812a",
+  "checkpoint_sha256": {
+    "model.safetensors": "31c52ab8d476bd649bf5eab6c6ebc9ffe0b36f68527799736552881c5002ad23",
+    "config.json": "a1f86a36e493f760f7ed2f34f591b15c0d16fd3818a65be3e056120bd8de972b",
+    "tokenizer.json": "8b79639ec74b46604e730f505186eaafb1006d2fd00f2c4930d168bb7f894680",
+    "tokenizer_config.json": "7fea6e9cd9711214d0eb2ca81e20405d945b6b61e993a925a425ecc84a46e400",
+    "run_metadata.json": "4bb4c868db8ed9164fa838d3857732ffeff3270553f56d42967cbf83452556af"
+  }
+}
