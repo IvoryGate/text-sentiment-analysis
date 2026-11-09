@@ -1,6 +1,9 @@
 # Source data
 data/
 
+# Local evaluation outputs
+/reports/reproduced/
+
 # Python packaging metadata
 *.egg-info/
 
