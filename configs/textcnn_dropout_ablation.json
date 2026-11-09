@@ -1,0 +1,44 @@
+{
+  "seeds": [
+    42,
+    123
+  ],
+  "dropout_values": [
+    0.5,
+    0.0
+  ],
+  "kernel_size": 3,
+  "num_filters": 64,
+  "embedding_dim": 128,
+  "max_words": 20000,
+  "max_length": 512,
+  "batch_size": 32,
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "max_epochs": 20,
+  "patience": 4,
+  "selection": "minimum validation cross-entropy loss",
+  "deterministic_algorithms": true,
+  "python": "3.12.7",
+  "torch": "2.7.1+cu118",
+  "cuda": "11.8",
+  "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "inputs": {
+    "train": {
+      "path": "data\\cleaned\\train.csv",
+      "sha256": "2358699a3a54b8e5861fec005c472b48ede0bdc5d5e7bf9c6cd8bb52c0b1d337"
+    },
+    "validation": {
+      "path": "data\\cleaned\\val.csv",
+      "sha256": "94200608eb6a2318bddd74584d5a525defc96915ac84ad0cb95cc7ce846bb0e8"
+    },
+    "model_code": {
+      "path": "src\\sentiment_analysis\\textcnn.py",
+      "sha256": "86d786096a69867c91efad04e1af99f3374775acbe082d6d22fc3602be16ddcc"
+    },
+    "sequence_code": {
+      "path": "src\\sentiment_analysis\\sequence_data.py",
+      "sha256": "914e83c34dbf26d51ea85184476ca74624bcff2475c625b3fdd3d499194482c7"
+    }
+  }
+}

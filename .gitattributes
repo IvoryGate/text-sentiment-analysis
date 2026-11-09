@@ -1,0 +1,16 @@
+# Preserve the original bytes checked by the fixed evaluation protocols.
+configs/three_model_voting_test_protocol.json -text
+configs/final_test_protocol.json -text
+configs/textcnn_dropout_ablation.json -text
+configs/distilbert_finetuning.json -text
+configs/distilbert_test_protocol.json -text
+src/sentiment_analysis/sequence_data.py -text
+src/sentiment_analysis/textcnn.py -text
+src/sentiment_analysis/lstm.py -text
+src/sentiment_analysis/evaluation.py -text
+reports/tables/traditional_ml_validation_metrics.csv -text
+reports/tables/fixed_experiment_summary.csv -text
+reports/tables/fixed_models_test_predictions.csv -text
+reports/tables/distilbert_test_predictions.csv -text
+reports/tables/three_model_voting_test_comparison.csv -text
+reports/tables/three_model_voting_test_predictions.csv -text

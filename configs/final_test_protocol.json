@@ -1,0 +1,88 @@
+{
+  "created_at": "2026-11-08T22:44:00+08:00",
+  "selection_basis": "Pre-test validation experiments; no test results used for selection.",
+  "primary": "seed 42 TextCNN + unidirectional LSTM, equal-weight soft voting",
+  "comparators": [
+    "seed 42 TextCNN",
+    "seed 42 unidirectional LSTM",
+    "seed 42 bidirectional LSTM",
+    "seed 42 TextCNN + bidirectional LSTM equal-weight soft voting",
+    "B06 TF-IDF + Linear SVM"
+  ],
+  "positive_label": 1,
+  "negative_label": 0,
+  "ensemble_weights": [
+    0.5,
+    0.5
+  ],
+  "classification_rule": "positive probability > 0.5; equality selects negative",
+  "metrics": [
+    "accuracy",
+    "precision",
+    "recall",
+    "f1",
+    "confusion matrix"
+  ],
+  "baseline": {
+    "model": "LinearSVC",
+    "C": 1.0,
+    "max_iter": 1000,
+    "random_state": 42,
+    "fit_data": "cleaned training split only"
+  },
+  "notes": [
+    "No refitting on validation or test data.",
+    "All compared models use the same cleaned test split.",
+    "The cleaned test split differs from the original official IMDB test split due to deduplication."
+  ],
+  "files": {
+    "train": {
+      "path": "data/cleaned/train.csv",
+      "sha256": "2358699a3a54b8e5861fec005c472b48ede0bdc5d5e7bf9c6cd8bb52c0b1d337"
+    },
+    "validation": {
+      "path": "data/cleaned/val.csv",
+      "sha256": "94200608eb6a2318bddd74584d5a525defc96915ac84ad0cb95cc7ce846bb0e8"
+    },
+    "test": {
+      "path": "data/cleaned/test.csv",
+      "sha256": "7bd5415632704fc7224d44760862729330d3b44b4b2f7893dcba485761bff026"
+    },
+    "tfidf": {
+      "path": "data/tfidf/combined.joblib",
+      "sha256": "a5f87a97322f32e2e3d82df91fc1188a9b81844fa381e40c24830b3059c4b7eb"
+    },
+    "textcnn": {
+      "path": "checkpoints/textcnn_extended_best.pt",
+      "sha256": "5b254f5210e8f809dddf1e078d7022d90f08f31100af231591c4f00b3fc76efb"
+    },
+    "lstm": {
+      "path": "checkpoints/lstm_best.pt",
+      "sha256": "684f292c1c5ed78f0412b0ffb51ce20bd38711df1ff0dc8ab07a3ee0c36fc333"
+    },
+    "bilstm": {
+      "path": "checkpoints/lstm_bidirectional_seed42_best.pt",
+      "sha256": "c45281e4b01251ff4a4198545998c2e6394979b642555ba6fbdbb93bcb870c4c"
+    },
+    "sequence_code": {
+      "path": "src/sentiment_analysis/sequence_data.py",
+      "sha256": "914e83c34dbf26d51ea85184476ca74624bcff2475c625b3fdd3d499194482c7"
+    },
+    "textcnn_code": {
+      "path": "src/sentiment_analysis/textcnn.py",
+      "sha256": "86d786096a69867c91efad04e1af99f3374775acbe082d6d22fc3602be16ddcc"
+    },
+    "lstm_code": {
+      "path": "src/sentiment_analysis/lstm.py",
+      "sha256": "bbe24ab7be0e53f3d68299f3376fc06bf5aa792c2e4fe19adeed995553853bc1"
+    },
+    "metrics_code": {
+      "path": "src/sentiment_analysis/evaluation.py",
+      "sha256": "e829683316d34682e21ee86de68b3df0255ab313d1eb4df5a7cb81b606ef1b92"
+    },
+    "baseline_validation": {
+      "path": "reports/tables/traditional_ml_validation_metrics.csv",
+      "sha256": "a3341440aa066c0a2cdb11acfe51a5be30c6d7e3752d1fd2b18cf8b7f6397288"
+    }
+  }
+}

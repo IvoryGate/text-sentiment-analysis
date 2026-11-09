@@ -1,0 +1,25 @@
+{
+  "validation_sha256": "94200608eb6a2318bddd74584d5a525defc96915ac84ad0cb95cc7ce846bb0e8",
+  "validation_rows": 2491,
+  "checkpoint_files": {
+    "42": {
+      "textcnn_file": "textcnn_extended_best.pt",
+      "textcnn_sha256": "5b254f5210e8f809dddf1e078d7022d90f08f31100af231591c4f00b3fc76efb",
+      "textcnn_epoch": 6,
+      "bilstm_file": "lstm_bidirectional_seed42_best.pt",
+      "bilstm_sha256": "c45281e4b01251ff4a4198545998c2e6394979b642555ba6fbdbb93bcb870c4c",
+      "bilstm_epoch": 3
+    },
+    "123": {
+      "textcnn_file": "textcnn_kernel3_seed123.pt",
+      "textcnn_sha256": "e1d012a9c55ec95204ca78f92b5416d1a5e2c291cd574d8fbd8c1a2c1b4a46f1",
+      "textcnn_epoch": 5,
+      "bilstm_file": "lstm_bidirectional_seed123_best.pt",
+      "bilstm_sha256": "bd23d2ed21ba920d67a01fc074692dd1a4ebd0da0fc337eca0b3f426cd59a6f9",
+      "bilstm_epoch": 3
+    }
+  },
+  "selected_textcnn_weight": 0.7,
+  "selection_seed": 42,
+  "threshold": 0.5
+}
